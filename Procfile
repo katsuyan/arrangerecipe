@@ -1,1 +1,1 @@
-web: gunicorn arrangerecipe.wsgi:app --log-file -
+web: gunicorn arrangerecipe.wsgi --log-file -
