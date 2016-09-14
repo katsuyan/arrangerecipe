@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+
+def book_list(request):
+    """書籍の一覧"""
+    return HttpResponse('書籍の一覧')
