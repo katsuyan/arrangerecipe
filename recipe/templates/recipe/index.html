@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}++++++{% endblock title %}
+{% block title %}+1{% endblock title %}
 
 {% block extrahead %}
 <style>
@@ -12,6 +12,8 @@
 <div id="header">
   <img src="{% static 'img/head.png' %}" style="width:100%;">
 </div>
+
+<div style="text-align:center;margin-top:32px;">作りたい料理を選ぶ</div><br>
 
 <div class="container" id="index">
   <form>
@@ -29,6 +31,8 @@
 
     <br><br>
 
+    <div style="text-align:center">食べたい味を選ぶ</div>
+
     <div class="row">
       {% for taste in taste_list %}
       <div class="col-xs-3">
@@ -41,7 +45,7 @@
       {% endfor %}
     </div>
 
-    <div class="center-block"style="width: 256px; text-align: center;">
+    <div class="center-block" style="width: 256px; text-align: center;">
       <button class="btn btn-warning" id="cook_button" style="text-align:center;">レシピを見る</button>
     </div>
   </form>
