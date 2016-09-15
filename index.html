@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Portfolio作成サイト（仮）</title>
+    <link href="css/application.css" rel="stylesheet"><!-- 相対パスでいいのか? -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+<header class="header">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#">Portfolio作成サイト（仮）</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">mypage</a></li>
+                <li><a href="#">logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="wrapIntro">
+            <nav>
+                <ul class="nav">
+                    <li class="pull-right"><a href="#Share" class="btn shareBtn">Share</a></li>
+                    <li class="pull-right"><a href="#editPage" class=" btn editBtn">Edit</a></li>
+                </ul>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="userProfile">
+                            <div class="iconContainer">
+                                <img src="images/about_face.jpg" alt="face" width="720">
+                            </div>
+                            <div class="profileTexts">
+                                <h1>Kei Tamiya</h1>
+                                <p class="userId">@tammy</p>
+                                <p class="title">Kei Tamiya のポートフォリオ</p>
+                                <p class="description"> エンジニアを目指しています。コーヒーが好きです。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="wordCloud">
+                            <img src="images/wordcloud_01.jpg" alt="wordCloud">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapContainer">
+        <section class="customField twitterField">
+            <div class="p_lr_20">
+                <div class="fieldIcon"><img src="images/icon_twitter.jpg" alt="Twitter" width="60" height="60"></div>
+                <h1 class="text-center">Twitter</h1>
+                <div class="twitterDetail">
+                    <div class="iconContainer snsIconContainer">
+                        <img src="images/about_face.jpg" alt="face" width="720" class="squareIcon">
+                    </div>
+                    <div class="customNames">
+                        <h2>けんじ</h2>
+                        <p class="customId">@kenjikenjikenji</p>
+                    </div>
+                    <p class="twitterDescription">ex. MicroTune (Dr.), イカリヤマナ ツバンド (Dr.) / 愛 教初等数学3年/軽 音部 /SPOON/ カメ ラとドラムとベース とたまーに切り絵</p>
+                </div>
+                <div class="twitterTimeline">
+                    <a class="twitter-timeline"  href="https://twitter.com/k_tamiyan" data-widget-id="404884035165384704">@k_tamiyanさんのツイート</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
+            </div>
+        </section><!--/twitterField-->
+
+        <section class="customField qiitaField">
+            <div class="p_lr_20">
+                <div class="fieldIcon"><img src="images/icon_qiita.jpg" alt="Twitter" width="60" height="60"></div>
+                <h1 class="text-center">Qiita</h1>
+                <div class="qiitaInfo">
+                    <div class="qiitaProfile">
+                        <div class="iconContainer snsIconContainer">
+                            <img src="images/face_qiita.jpg" alt="qiitaIcon" class="squareIcon">
+                        </div>
+                        <h2 class="qiitaUserName">User Name</h2>
+                    </div>
+                    <div class="qiitaCounts">
+                        <ul>
+                            <li>
+                                <p class="countNum">1000</p>
+                                <p class="countText">Contribution</p>
+                            </li>
+                            <li>
+                                <p class="countNum">1000</p>
+                                <p class="countText">Followers</p>
+                            </li>
+                            <li>
+                                <p class="countNum">1000</p>
+                                <p class="countText">Items</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="qiitaTags">
+                    <ul>
+                        <!-- liにclassをつけて各言語のアイコンをつけるか迷う -->
+                        <li class="qiitaTag">C#</li>
+                        <li class="qiitaTag">ShellScript</li>
+                        <li class="qiitaTag">C#</li>
+                        <li class="qiitaTag">C#</li>
+                        <li class="qiitaTag">C#</li>
+                        <li class="qiitaTag">ShellScript</li>
+                        <li class="qiitaTag">ShellScript</li>
+                        <li class="qiitaTag">C#</li>
+                        <li class="qiitaTag">ShellScript</li>
+                        <li class="qiitaTag">ShellScript</li>
+                        <li class="qiitaTag">C#</li>
+                        <li class="qiitaTag">C#</li>
+                    </ul>
+                </div>
+                <div class="qiitaPosts">
+                    <section>
+                        <div class="qiitaPostDetail">
+                            <h2>PostgresSQLのbackup, restore方法まとめ</h2>
+                            <div class="qiitaTags">
+                                <ul>
+                                    <!-- liにclassをつけて各言語のアイコンをつけるか迷う -->
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">C#</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="qiitaStockComment">
+                            <li>
+                                <div class="countBox">
+                                    <p class="scNum">1000</p>
+                                    <p class="scText">ストック</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="countBox">
+                                    <p class="scNum">1000</p>
+                                    <p class="scText">コメント</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="qiitaPostDetail">
+                            <h2>PostgresSQLのbackup, restore方法まとめ</h2>
+                            <div class="qiitaTags">
+                                <ul>
+                                    <!-- liにclassをつけて各言語のアイコンをつけるか迷う -->
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">C#</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="qiitaStockComment">
+                            <li>
+                                <div class="countBox">
+                                    <p class="scNum">1000</p>
+                                    <p class="scText">ストック</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="countBox">
+                                    <p class="scNum">1000</p>
+                                    <p class="scText">コメント</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <div class="qiitaPostDetail">
+                            <h2>PostgresSQLのbackup, restore方法まとめ</h2>
+                            <div class="qiitaTags">
+                                <ul>
+                                    <!-- liにclassをつけて各言語のアイコンをつけるか迷う -->
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">C#</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                    <li class="qiitaTag">ShellScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="qiitaStockComment">
+                            <li>
+                                <div class="countBox">
+                                    <p class="scNum">1000</p>
+                                    <p class="scText">ストック</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="countBox">
+                                    <p class="scNum">1000</p>
+                                    <p class="scText">コメント</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section><!--/qiitaField-->
+
+        <section class="customField facebookField">
+            <div class="p_lr_20">
+                <div class="fieldIcon"><img src="images/icon_facebook.jpg" alt="Facebook" width="60" height="60"></div>
+                <h1 class="text-center">Facebook</h1>
+                <div class="facebookDetail" id="facebookDetail">
+                    <div class="iconContainer snsIconContainer">
+                        <img src="images/about_face.jpg" alt="face" width="240" class="squareIcon">
+                    </div>
+                    <div class="facebookProfile">
+                        <h2>佐々木H</h2>
+                        <dl>
+                            <dt>出身地:</dt>
+                            <dd>千葉県 船橋市</dd>
+                            <dt>居住地:</dt>
+                            <dd>東京都世田谷区</dd>
+                            <dt>大学:</dt>
+                            <dd>VOYAGE GROUP</dd>
+                        </dl>
+                    </div>
+
+                </div>
+
+                <div id="fbCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#fbCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#fbCarousel" data-slide-to="1"></li>
+                        <li data-target="#fbCarousel" data-slide-to="2"></li>
+                        <li data-target="#fbCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item fbItem active">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample01.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample02.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample03.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample04.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample05.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample06.jpg" alt="fbphoto"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="item fbItem">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample01.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample02.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample03.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample04.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample05.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample06.jpg" alt="fbphoto"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="item fbItem">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample01.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample02.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample03.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample04.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample05.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample06.jpg" alt="fbphoto"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="item fbItem">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample01.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample02.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample03.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample04.jpg" alt="fbphoto"></div>
+                                </div>
+                                <div class="col-sm-4 col-xs-4">
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample05.jpg" alt="fbphoto"></div>
+                                    <div class="fbImgCover"><img src="images/remove_later/fbphoto_sample06.jpg" alt="fbphoto"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left fbLeft sliderLeft carousel-control" href="#fbCarousel" role="button" data-slide="prev">
+                        <img src="images/slider_left.png" alt="slider_left.png" width="40">
+                    </a>
+                    <a class="right fbRight sliderRight carousel-control" href="#fbCarousel" role="button" data-slide="next">
+                        <img src="images/slider_right.png" alt="slider_right.png" width="40">
+                    </a>
+                </div><!--/fbCarousel-->
+            </div>
+        </section><!--/facebookField-->
+
+        <section class="customField githubField">
+            <div class="p_lr_20">
+                <div class="fieldIcon"><img src="images/icon_github.jpg" alt="Github" width="60" height="60"></div>
+                <h1 class="text-center">Github</h1>
+                <div class="githubChart">
+                    <img src="images/remove_later/github_chart.png" alt="githubChart">
+                </div>
+                <div class="githubProfile">
+                    <div class="iconContainer snsIconContainer">
+                        <img src="images/about_face.jpg" alt="face" width="240" class="squareIcon">
+                    </div>
+                    <div class="customNames">
+                        <h2>佐々木H</h2>
+                        <p class="customId">kei-tamiya</p>
+                    </div>
+
+                </div>
+
+                <div class="githubRepos">
+                    <section class="githubRepo">
+                        <h2><a href="#">takiue-takizawa-weathertakiue-takizawa-weather</a></h2><!-- 各レポジトリへのリンクも取得する？ -->
+                        <p>滝沢市の天気予報TwitterBOT - たき報TwitterBOT - たき報TwitterBOT - たき報TwitterBOT - たき報TwitterBOT - たきうえくん</p>
+                    </section>
+
+                    <section class="githubRepo">
+                        <h2><a href="#">takizawa-weather</a></h2><!-- 各レポジトリへのリンクも取得する？ -->
+                        <p>たき報TwitterBOT - たき報TwitterBOT </p>
+                    </section>
+
+                    <section class="githubRepo">
+                        <h2><a href="#">takiue-takizawa-weathertakiue-takizawa-weather</a></h2><!-- 各レポジトリへのリンクも取得する？ -->
+                        <p>滝沢市の天気予報TwitterBOT - たき報TwitterBOT - たき報TwitterBOT - たき報TwitterBOT - たき報TwitterBOT - たきうえくん</p>
+                    </section>
+                </div>
+            </div>
+        </section><!--/githubField-->
+
+        <section class="customField hatenaField">
+            <div class="p_lr_20">
+                <div class="fieldIcon"><img src="images/icon_hatena.jpg" alt="Hatena" width="60" height="60"></div>
+                <h1 class="text-center">Hatena</h1>
+                <div class="hatenaProfile">
+                    <div class="iconContainer snsIconContainer">
+                        <img src="images/about_face.jpg" alt="face" width="240" class="squareIcon">
+                    </div>
+                    <div class="customNames">
+                        <h2>佐々木H</h2>
+                        <p class="customId">kei-tamiya</p>
+                    </div>
+
+                </div>
+
+                <!-- はてなの記事数は5件ぐらい？ -->
+                <div class="hatenaPosts">
+                    <section class="hatenaPost">
+                        <h2><a href="#">Dockerを使ってAnsible Playbookのテストをする - neocorno
+                        </a></h2><!-- 各はてな記事のリンクも取得する？ -->
+                        <div class="hatebuCount">
+                            <img src="images/icon_hatebu.jpg" alt="HatenaBookmark">
+                            <p class="hatebuNum">100</p>
+                        </div>
+                    </section>
+
+                    <section class="hatenaPost">
+                        <h2><a href="#">takizawa-weather</a></h2><!-- 各レポジトリへのリンクも取得する？ -->
+                        <div class="hatebuCount">
+                            <img src="images/icon_hatebu.jpg" alt="HatenaBookmark">
+                            <p class="hatebuNum">100</p>
+                        </div>
+                    </section>
+
+                    <section class="hatenaPost">
+                        <h2><a href="#">takiue-takizawa-weathertakiue-takizawa-weather</a></h2><!-- 各レポジトリへのリンクも取得する？ -->
+                        <div class="hatebuCount">
+                            <img src="images/icon_hatebu.jpg" alt="HatenaBookmark">
+                            <p class="hatebuNum">100</p>
+                        </div>
+                    </section>
+
+                    <section class="hatenaPost">
+                        <h2><a href="#">takiue-takizawa-weathertakiue-takizawa-weather</a></h2><!-- 各レポジトリへのリンクも取得する？ -->
+                        <div class="hatebuCount">
+                            <img src="images/icon_hatebu.jpg" alt="HatenaBookmark">
+                            <p class="hatebuNum">100</p>
+                        </div>
+                    </section>
+
+                    <section class="hatenaPost">
+                        <h2><a href="#">takiue-takizawa-weathertakiue-takizawa-weather</a></h2><!-- 各レポジトリへのリンクも取得する？ -->
+                        <div class="hatebuCount">
+                            <img src="images/icon_hatebu.jpg" alt="HatenaBookmark">
+                            <p class="hatebuNum">100</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section><!--/hatenaField-->
+
+        <section class="customField connpassField">
+            <div class="p_lr_20">
+                <div class="fieldIcon"><img src="images/icon_connpass.jpg" alt="Connpass" width="60" height="60"></div>
+                <h1 class="text-center">Connpass</h1>
+                <div class="connpassDetail">
+                    <div class="iconContainer snsIconContainer">
+                        <img src="images/about_face.jpg" alt="face" width="240" class="squareIcon">
+                    </div>
+                    <div class="connpassProfile">
+                        <div class="customNames">
+                            <h2>民谷啓</h2><!-- 表示名 -->
+                            <p class="customId">kei_tamiya</p><!-- id名 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 過去に参加したイベントと、所属group。cssデザインは一緒なのでクラス名は同じにしてあります -->
+                <div class="connpassGroups">
+                    <h2>過去に参加したイベント</h2>
+                    <ul>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="connpassGroups">
+                    <h2>所属グループ</h2>
+                    <ul>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                        <li>
+                            <div class="groupThumb"></div>
+                            <p>vuls-jp</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section><!--/connpassField-->
+
+        <!-- とりあえずcustomFieldの規格はこの1つのみにしましょうか -->
+        <section class="custom customField customYellow">
+            <div class="p_lr_20">
+                <div class="customPhotoSlider">
+                    <div id="customCarousel-1" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#customCarousel-1" data-slide-to="0" class="active"></li>
+                            <li data-target="#customCarousel-1" data-slide-to="1"></li>
+                            <li data-target="#customCarousel-1" data-slide-to="2"></li>
+                            <li data-target="#customCarousel-1" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/remove_later/connpass_sample01.jpg" alt="SlidePhoto01">
+                            </div>
+                            <div class="item">
+                                <img src="images/remove_later/connpass_sample02.jpg" alt="SlidePhoto02">
+                            </div>
+                            <div class="item">
+                                <img src="images/remove_later/connpass_sample03.jpg" alt="SlidePhoto03">
+                            </div>
+                            <div class="item">
+                                <img src="images/remove_later/connpass_sample04.jpg" alt="SlidePhoto04">
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control sliderLeft" href="#customCarousel-1" role="button" data-slide="prev">
+                            <img src="images/slider_left.png" alt="slider_left.png" width="40">
+                        </a>
+                        <a class="right carousel-control sliderRight" href="#customCarousel-1" role="button" data-slide="next">
+                            <img src="images/slider_right.png" alt="slider_right.png" width="40">
+                        </a>
+                    </div>
+                </div><!-- /customPhotoSlider -->
+                <div class="customDetail">
+                    <h1 class="text-center">Custom Name</h1> <!-- ここもInsertできるようにする -->
+                    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</p>
+                </div>
+            </div>
+        </section><!--/customField-->
+    </div><!--/wrapConteiner-->
+</div><!--/conteiner-->
+<footer>
+    <p>&copy 2016 TeamYSTK</p>
+</footer>
+</body>
+</html>
