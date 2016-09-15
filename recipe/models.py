@@ -12,7 +12,7 @@ class Taste(models.Model):
 class Category(models.Model):
     """料理のカテゴリー"""
     id = models.AutoField(primary_key=True)
-    name = models.CharField('味付け', max_length=255)
+    name = models.CharField('カテゴリー', max_length=255)
 
     def __str__(self):
         return self.name
