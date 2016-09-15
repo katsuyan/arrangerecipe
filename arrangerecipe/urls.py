@@ -20,4 +20,5 @@ from recipe import views as recipe_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', recipe_views.book_list, name='book_list'),
+    url(r'^recipeid/', recipe_views.get_recipe_id, name='recipeid')
 ]

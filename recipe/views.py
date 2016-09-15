@@ -4,10 +4,10 @@ from django.shortcuts import get_object_or_404, redirect
 from django.db import transaction
 from recipe.models import Taste, Category, Recipe
 from django.views.decorators.csrf import ensure_csrf_cookie
+import json
 import logging
 
 logger = logging.getLogger(__name__)
-
 
 
 def book_list(request):
@@ -28,6 +28,9 @@ def book_list(request):
 
 
 def get_recipe_id(request):
-    recipe = Recipe.objects.filter(taste_id='1', category_id='1')
-    logger.error(recipe)
-    pass
+    category_id = request.GET['category_id']
+    taste_id = request.GET['taste_id']
+    recipe = Recipe.objects.filter(taste_id=taste_id, category_id=category_id)
+    data = {"id": recipe[0].id}
+    json_str = json.dumps(data, ensure_ascii=False, indent=2)
+    return HttpResponse(json_str, content_type='application/json; charset=UTF-8', status=200)
