@@ -14,7 +14,7 @@
     {% for category in category_list %}
     <div class="radio">
       <label>
-        <input type="radio" class="category" value="{{ category.id }}">
+        <input type="radio" name="category" value="{{ category.id }}">
         {{ category.name }}
       </label>
     </div>
@@ -26,7 +26,7 @@
     {% for taste in taste_list %}
     <div class="radio">
       <label>
-        <input type="radio" class="taste" value="{{ category_id }}">
+        <input type="radio" name="taste" value="{{ taste.id }}">
         {{ taste.name }}
       </label>
     </div>
