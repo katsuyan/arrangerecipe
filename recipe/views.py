@@ -9,7 +9,14 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+
 def book_list(request):
     tastes = Taste.objects.all().order_by("id")
     categories = Category.objects.all().order_by("id")
     return render(request, 'recipe/index.html')
+
+
+def get_recipe_id(request):
+    recipe = Recipe.objects.filter(taste_id='1', category_id='1')
+    logger.error(recipe)
+    pass
