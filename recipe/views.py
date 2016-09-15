@@ -11,9 +11,20 @@ logger = logging.getLogger(__name__)
 
 
 def book_list(request):
-    tastes = Taste.objects.all().order_by("id")
     categories = Category.objects.all().order_by("id")
-    return render(request, 'recipe/index.html')
+    tastes = Taste.objects.all().order_by("id")
+
+    category_list = []
+    for category in categories:
+        category_data = {"id": category.id, "name": category.name}
+        category_list.append(category_data)
+
+    taste_list = []
+    for taste in tastes:
+        taste_data = {"id": taste.id, "name": taste.name}
+        taste_list.append(taste_data)
+
+    return render(request, 'recipe/index.html', {"category_list": category_list, "taste_list": taste_list})
 
 
 def get_recipe_id(request):
