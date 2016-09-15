@@ -1,9 +1,20 @@
 var ARRANGE = ARRANGE || {};
 
+$(function(){
+    if($.cookie("access")){
+        alert("aaa")
+    }
+    $(window).load(function(){
+        $.cookie("access",$('body').addClass('access'));
+    })
+});
+
 (function () {
 
   $.sygImageRadio( '.radioGroup1' );
   $.sygImageRadio( '.radioGroup2' );
+
+
 
   $('#index').on('click', '#cook_button', function(e) {
     var category_id = $('input[name=category]:checked').val();
