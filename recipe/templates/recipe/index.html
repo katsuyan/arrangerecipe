@@ -8,23 +8,57 @@
 {% endblock %}
 
 {% block content %}
-<div>
-  <button>aaaa</button>
-  <button>aaaa</button>
-  <button>aaaa</button>
-  <button>aaaa</button>
-  <button>aaaa</button>
+<div class="container" id="index">
+
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      aaaa
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+      aaaa
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+      aaaa
+    </label>
+  </div>
+
+  <br>
+
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadio" id="optionsRadios1" value="option1" checked>
+      bbbb
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadio" id="optionsRadios2" value="option2">
+      bbbb
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadio" id="optionsRadios3" value="option3">
+      bbbb
+    </label>
+  </div>
+
+  <div>
+    <button class="btn btn-default" id="cook_button">作る</button>
+  </div>
+
 </div>
 
-<div>
-  <button>bbbb</button>
-  <button>bbbb</button>
-  <button>bbbb</button>
-  <button>bbbb</button>
-  <button>bbbb</button>
-</div>
 
 <!-- javascript -->
+<script type="text/javascript"> {% include "js/index.js" %} </script>
 <!-- /javascript -->
 
 {% endblock content %}
