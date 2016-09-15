@@ -25,4 +25,4 @@ class Recipe(models.Model):
     taste = models.ForeignKey(Taste, verbose_name='味付け', related_name='recipe')
 
     def __str__(self):
-        return self.id
+        return str(self.id)
