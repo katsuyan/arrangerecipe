@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def book_list(request):
-    return render(request, 'recipe/category.html')
+    return render(request, 'recipe/index.html')
