@@ -3,7 +3,7 @@ var ARRANGE = ARRANGE || {};
 (function () {
 
   $.sygImageRadio( '.radioGroup1' );
-  $.sygImageRadio( '.checkGroup1' );
+  $.sygImageRadio( '.radioGroup2' );
 
   $('#index').on('click', '#cook_button', function(e) {
     var category_id = $('input[name=category]:checked').val();

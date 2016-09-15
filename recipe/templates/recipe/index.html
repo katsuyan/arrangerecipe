@@ -9,14 +9,18 @@
 {% endblock %}
 
 {% block content %}
+<div id="cat_cover">
+  <h1><img src="{% static 'img/head.png' %}" style="width:100%;padding-top:0;"></h1>
+</div>
+
 <div class="container" id="index">
   <form>
     <div class="row">
       {% for category in category_list %}
       <div class="col-xs-3">
         <div class="radio">
-          <input type="radio" name="category" id="{{ category.id }}" value="{{ category.id }}" style="display:none">
-          <label for="{{ category.id }}"><img src="/static/img/1.png" class="radioGroup1" /></label>
+          <input type="radio" name="category" id="c_{{ category.id }}" value="{{ category.id }}" style="display:none">
+          <label for="c_{{ category.id }}"><img src="/static/img/1.png" class="radioGroup1" /></label>
           <br><br><div style="font-size:11px;text-align:center">{{ category.name }}</div>
         </div>
       </div>
@@ -29,8 +33,8 @@
       {% for taste in taste_list %}
       <div class="col-xs-3">
         <div class="radio">
-          <input type="radio" name="taste" id="{{ taste.id }}" value="{{ taste.id }}" style="display:none">
-          <label for="{{ taste.id }}"><img src="/static/img/1.png" class="radioGroup1" /></label>
+          <input type="radio" name="taste" id="t_{{ taste.id }}" value="{{ taste.id }}" style="display:none">
+          <label for="t_{{ taste.id }}"><img src="/static/img/1.png" class="radioGroup2" /></label>
           <br><br><div style="font-size:11px;text-align:center">{{ taste.name }}</div>
         </div>
       </div>
