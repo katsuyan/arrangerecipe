@@ -10,44 +10,27 @@
 {% block content %}
 <div class="container" id="index">
 
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      aaaa
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      aaaa
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-      aaaa
-    </label>
+  <div>
+    {% for category in category_list %}
+    <div class="radio">
+      <label>
+        <input type="radio" name="category">
+        {{ category.name }}
+      </label>
+    </div>
+    {% endfor %}
   </div>
 
   <br>
-
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadio" id="optionsRadios1" value="option1" checked>
-      bbbb
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadio" id="optionsRadios2" value="option2">
-      bbbb
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadio" id="optionsRadios3" value="option3">
-      bbbb
-    </label>
+  <div>
+    {% for taste in taste_list %}
+    <div class="radio">
+      <label>
+        <input type="radio" name="taste">
+        {{ taste.name }}
+      </label>
+    </div>
+    {% endfor %}
   </div>
 
   <div>
