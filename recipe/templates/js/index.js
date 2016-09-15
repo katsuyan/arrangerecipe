@@ -28,6 +28,7 @@ var ARRANGE = ARRANGE || {};
         alert("レシピが見つかりませんでした。");
       }
     });
+    return false;
   });
 
 }());
