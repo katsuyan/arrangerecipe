@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block title %}++++++{% endblock title %}
 
@@ -9,33 +10,37 @@
 
 {% block content %}
 <div class="container" id="index">
-
-  <div>
-    {% for category in category_list %}
-    <div class="radio">
-      <label>
-        <input type="radio" name="category" value="{{ category.id }}">
-        {{ category.name }}
-      </label>
+  <form>
+    <div class="row">
+      {% for category in category_list %}
+      <div class="col-xs-3">
+        <div class="radio">
+          <input type="radio" name="category" id="{{ category.id }}" value="{{ category.id }}" style="display:none">
+          <label for="{{ category.id }}"><img src="/static/img/1.png" class="radioGroup1" /></label>
+          <br><br><div style="font-size:11px;text-align:center">{{ category.name }}</div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 
-  <br>
-  <div>
-    {% for taste in taste_list %}
-    <div class="radio">
-      <label>
-        <input type="radio" name="taste" value="{{ taste.id }}">
-        {{ taste.name }}
-      </label>
+    <br><br>
+
+    <div class="row">
+      {% for taste in taste_list %}
+      <div class="col-xs-3">
+        <div class="radio">
+          <input type="radio" name="taste" id="{{ taste.id }}" value="{{ taste.id }}" style="display:none">
+          <label for="{{ taste.id }}"><img src="/static/img/1.png" class="radioGroup1" /></label>
+          <br><br><div style="font-size:11px;text-align:center">{{ taste.name }}</div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
 
-  <div>
-    <button class="btn btn-default" id="cook_button">作る</button>
-  </div>
+    <div>
+      <button class="btn btn-default" id="cook_button">作る</button>
+    </div>
+  </form>
 
 </div>
 
