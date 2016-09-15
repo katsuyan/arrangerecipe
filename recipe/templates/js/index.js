@@ -6,6 +6,22 @@ var ARRANGE = ARRANGE || {};
   $.sygImageRadio( '.radioGroup1' );
   $.sygImageRadio( '.radioGroup2' );
 
+  $('#index').on('click', 'input[name=category]', function(e) {
+    var taste_id = $('input[name=taste]:checked').val();
+    if(!taste_id) {
+      return false;
+    }
+    $('#cook_button').prop("disabled", false);
+  })
+
+
+  $('#index').on('click', 'input[name=taste]', function(e) {
+    var taste_id = $('input[name=taste]:checked').val();
+    if(!taste_id) {
+      return false;
+    }
+    $('#cook_button').prop("disabled", false);
+  })
 
 
   $('#index').on('click', '#cook_button', function(e) {
