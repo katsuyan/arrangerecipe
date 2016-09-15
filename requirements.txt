@@ -33,4 +33,5 @@ simplegeneric==0.8.1
 six==1.10.0
 traitlets==4.2.1
 Werkzeug==0.11.11
+whitenoise==3.2.1
 wrapt==1.10.8
