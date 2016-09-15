@@ -20,9 +20,9 @@ class Category(models.Model):
 
 class Recipe(models.Model):
     """レシピ"""
-    id = models.AutoField(primary_key=True)
+    id = models.IntegerField(primary_key=True)
     category = models.ForeignKey(Category, verbose_name='カテゴリー', related_name='recipe')
     taste = models.ForeignKey(Taste, verbose_name='味付け', related_name='recipe')
 
     def __str__(self):
-        return self.taste.name
+        return self.id
