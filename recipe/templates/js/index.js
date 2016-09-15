@@ -3,7 +3,7 @@ var ARRANGE = ARRANGE || {};
 (function () {
 
   $('#index').on('click', '#cook_button', function(e){
-    alert("aaa");
+    window.open('http://cookpad.com/recipe/3141186')
   });
 
 }());
