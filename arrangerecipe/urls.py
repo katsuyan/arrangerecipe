@@ -21,7 +21,3 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', recipe_views.book_list, name='book_list'),
 ]
-
-urlpatterns += patterns('', url(r'^static/(?P<path>.*)$',
- 'django.views.static.serve',
-  {'document_root': settings.STATIC_ROOT,}),)
