@@ -13,10 +13,13 @@
   <img src="{% static 'img/head.png' %}" style="width:100%;">
 </div>
 
-<div style="text-align:center;margin-top:32px;color:#636566;">作りたい料理を選ぶ</div><br>
 
 <div class="container" id="index">
   <form>
+
+    <div style="text-align:center;margin-top:32px;color:#636566;">作りたい料理を選ぶ</div>
+    <hr width="40px" color="#636566" style="margin-top:5px">
+
     <div class="row">
       {% for category in category_list %}
       <div class="col-xs-3">
@@ -32,6 +35,7 @@
     <br><br>
 
     <div style="text-align:center;color:#636566;">食べたい味を選ぶ</div>
+    <hr width="40px" color="#636566" style="margin-top:5px">
 
     <div class="row">
       {% for taste in taste_list %}
