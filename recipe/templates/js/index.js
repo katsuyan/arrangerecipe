@@ -1,13 +1,5 @@
 var ARRANGE = ARRANGE || {};
 
-$(function(){
-    if($.cookie("access")){
-        alert("aaa")
-    }
-    $(window).load(function(){
-        $.cookie("access",$('body').addClass('access'));
-    })
-});
 
 (function () {
 
