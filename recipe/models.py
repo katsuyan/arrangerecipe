@@ -18,7 +18,7 @@ class Category(models.Model):
         return self.name
 
 
-class recipe(models.Model):
+class Recipe(models.Model):
     """レシピ"""
     id = models.AutoField(primary_key=True)
     category = models.ForeignKey(Category, verbose_name='カテゴリー', related_name='recipe')
