@@ -25,7 +25,7 @@ var ARRANGE = ARRANGE || {};
       },
       error: function(data) {
         console.log(data);
-        alert("失敗");
+        alert("レシピが見つかりませんでした。");
       }
     });
   });
