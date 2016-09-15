@@ -26,10 +26,13 @@
         <div class="radio">
           <input type="radio" name="category" id="c_{{ category.id }}" value="{{ category.id }}" style="display:none">
           <label for="c_{{ category.id }}">
-            <img width="55px" src="/static/img/{{ category.name }}.png" class="radioGroup1" />
+            <img width="55px" src="/static/img/{{ category.name }}.png" class="radioGroup1" style="margin-left:-15px" />
           </label>
           <br><br><div style="font-size:11px;text-align:center">{{ category.name }}</div>
         </div>
+        {% if category.name == '野菜炒め' %}
+        <br>
+        {% endif %}
       </div>
       {% endfor %}
     </div>
