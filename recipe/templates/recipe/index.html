@@ -22,7 +22,7 @@
 
     <div class="row" style="margin-top:-10px;">
       {% for category in category_list %}
-      <div class="col-xs-3">
+      <div class="col-xs-3" style="margin-top:-5px;">
         <div class="radio">
           <input type="radio" name="category" id="c_{{ category.id }}" value="{{ category.id }}" style="display:none">
           <label for="c_{{ category.id }}">
@@ -44,7 +44,7 @@
 
     <div class="row" style="margin-top:-10px;">
       {% for taste in taste_list %}
-      <div class="col-xs-3">
+      <div class="col-xs-3" style="margin-top:-5px;">
         <div class="radio">
           <input type="radio" name="taste" id="t_{{ taste.id }}" value="{{ taste.id }}" style="display:none">
           <label for="t_{{ taste.id }}">
@@ -56,7 +56,7 @@
       {% endfor %}
     </div>
 
-    <div class="center-block" style="width: 256px; text-align: center; margin-top: 30px;">
+    <div class="center-block" style="width: 256px; text-align: center; margin-top: 30px; margin-bottom: 30px;">
       <button class="btn btn-warning" id="cook_button" style="text-align:center;" disabled>レシピを見る</button>
     </div>
   </form>
