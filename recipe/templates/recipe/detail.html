@@ -39,13 +39,18 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  margin: 5px !important;
+}
 </style>
 {% endblock %}
 
 {% block content %}
 
+<div class="swiper-pagination" style="position: fixed;bottom: 10px;left: 0;width: 100%;"></div>
 <!-- Swiper -->
 <div class="swiper-container">
+
   <div class="swiper-wrapper">
     <div class="swiper-slide">
       <img width="100%" src="/static/img/aaa.jpg">
@@ -58,7 +63,7 @@ body {
     </div>
   </div>
   <!-- Add Pagination -->
-  <div class="swiper-pagination"></div>
+
 </div>
 
 <!-- Initialize Swiper -->
