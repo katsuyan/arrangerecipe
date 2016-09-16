@@ -11,6 +11,12 @@ var ARRANGE = ARRANGE || {};
     $.cookie('key', 'visit', { expires: 999999999 });
   }
 
+  if($('input[name=taste]:checked').val() & $('input[name=taste]:checked').val()){
+    $('#cook_button').css('background-color', '#FF9933');
+    $('#cook_button').css('color', 'White');
+    $('#cook_button').prop("disabled", false);
+  }
+
   $('#index').on('click', 'input[name=category]', function(e) {
     var taste_id = $('input[name=taste]:checked').val();
     if(!taste_id) {
