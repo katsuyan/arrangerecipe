@@ -6,6 +6,13 @@ var ARRANGE = ARRANGE || {};
   $.sygImageRadio( '.radioGroup1' );
   $.sygImageRadio( '.radioGroup2' );
 
+  if($.cookie("access")){
+    alert("aaa")
+  }
+  $(window).load(function(){
+    $.cookie("access",$('body').addClass('access'));
+  })
+
   $('#index').on('click', 'input[name=category]', function(e) {
     var taste_id = $('input[name=taste]:checked').val();
     if(!taste_id) {
