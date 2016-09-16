@@ -16,6 +16,8 @@ var ARRANGE = ARRANGE || {};
     if(!taste_id) {
       return false;
     }
+    $('#cook_button').css('background-color', '#FF9933');
+    $('#cook_button').css('color', 'White');
     $('#cook_button').prop("disabled", false);
   })
 
@@ -25,6 +27,8 @@ var ARRANGE = ARRANGE || {};
     if(!taste_id) {
       return false;
     }
+    $('#cook_button').css('background-color', '#FF9933');
+    $('#cook_button').css('color', 'White');
     $('#cook_button').prop("disabled", false);
   })
 
