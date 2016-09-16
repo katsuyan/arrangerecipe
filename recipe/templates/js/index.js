@@ -6,12 +6,10 @@ var ARRANGE = ARRANGE || {};
   $.sygImageRadio( '.radioGroup1' );
   $.sygImageRadio( '.radioGroup2' );
 
-  if($.cookie("access")){
-    alert("aaa")
+  if (!$.cookie('key')){
+    $('#mordal_button').click();
+    $.cookie('key', 'visit', { expires: 999999999 });
   }
-  $(window).load(function(){
-    $.cookie("access",$('body').addClass('access'));
-  })
 
   $('#index').on('click', 'input[name=category]', function(e) {
     var taste_id = $('input[name=taste]:checked').val();
