@@ -50,19 +50,17 @@ var ARRANGE = ARRANGE || {};
       alert('味付けを選択してください');
       return false;
     }
-    location.href = '/detail/' + category_id + '/' + taste_id;
-    // $.ajax({
-    //   type: 'GET',
-    //   url: '{% url "recipeid" %}',
-    //   data: {category_id: category_id, taste_id: taste_id},
-    //   success: function(data) {
-    //     window.open('http://cookpad.com/recipe/' + data.id);
-    //   },
-    //   error: function(data) {
-    //     console.log(data);
-    //     alert("レシピが見つかりませんでした。");
-    //   }
-    // });
+    $.ajax({
+      type: 'GET',
+      url: '{% url "recipeid" %}',
+      data: {category_id: category_id, taste_id: taste_id},
+      success: function(data) {
+        location.href = '/detail/' + category_id + '/' + taste_id;
+      },
+      error: function(data) {
+        alert("レシピが見つかりませんでした。");
+      }
+    });
     return false;
   });
 
