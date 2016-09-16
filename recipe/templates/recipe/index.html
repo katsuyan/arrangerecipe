@@ -17,7 +17,7 @@
 <div class="container" id="index">
   <form>
 
-    <div style="text-align:center;margin-top:32px;color:#636566;">作りたい料理を選ぶ</div>
+    <div style="text-align:center;margin-top:16px;color:#636566;">作りたい料理を選ぶ</div>
     <hr width="40px" style="margin-top:5px;color:color:#636566;height:5px;">
 
     <div class="row" style="margin-top:-10px;">
@@ -26,7 +26,7 @@
         <div class="radio">
           <input type="radio" name="category" id="c_{{ category.id }}" value="{{ category.id }}" style="display:none">
           <label for="c_{{ category.id }}">
-            <img width="55px" src="/static/img/{{ category.name }}.png" class="radioGroup1" style="margin-left:-15px" />
+            <img width="64px" src="/static/img/{{ category.name }}.png" class="radioGroup1" style="margin-left:-16px" />
           </label>
           <div style="font-size:11px;text-align:center;margin-top:10px;">{{ category.name }}</div>
         </div>
@@ -48,7 +48,7 @@
         <div class="radio">
           <input type="radio" name="taste" id="t_{{ taste.id }}" value="{{ taste.id }}" style="display:none">
           <label for="t_{{ taste.id }}">
-            <img width="55px" src="/static/img/{{ taste.name }}.png" class="radioGroup2" style="margin-left:-15px" />
+            <img width="64px" src="/static/img/{{ taste.name }}.png" class="radioGroup2" style="margin-left:-16px" />
           </label>
           <div style="font-size:11px;text-align:center;margin-top:10px;">{{ taste.name }}</div>
         </div>
@@ -56,8 +56,8 @@
       {% endfor %}
     </div>
 
-    <div class="center-block" style="width: 256px; text-align: center; margin-top: 30px; margin-bottom: 30px;">
-      <button class="btn btn-warning" id="cook_button" style="text-align:center;" disabled>レシピを見る</button>
+    <div class="center-block" style="width: 256px; text-align: center; margin-top: 8px; margin-bottom: 24px;">
+      <button class="btn btn-warning btn-lg" id="cook_button" style="text-align:center;" disabled>レシピを見る</button>
     </div>
   </form>
 
