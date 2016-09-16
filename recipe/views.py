@@ -35,5 +35,11 @@ def get_recipe_id(request):
     json_str = json.dumps(data, ensure_ascii=False, indent=2)
     return HttpResponse(json_str, content_type='application/json; charset=UTF-8', status=200)
 
-def detail(request):
-    return render(request, 'recipe/detail.html')
+def detail(request, category_id=None, taste_id=None):
+    recipes = Recipe.objects.filter(taste_id=taste_id, category_id=category_id)
+    ids = []
+    for recipe in recipes:
+        ids.append(recipe.id)
+    print(ids)
+    data = {"ids": recipe}
+    return render(request, 'recipe/detail.html', {"ids": ids})

@@ -21,5 +21,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', recipe_views.book_list, name='book_list'),
     url(r'^recipeid/', recipe_views.get_recipe_id, name='recipeid'),
-    url(r'^detail/', recipe_views.detail, name='detail'),
+    url(r'^detail/(?P<category_id>\d+)/(?P<taste_id>\d+)/', recipe_views.detail, name='detail'),
 ]

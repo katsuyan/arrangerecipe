@@ -52,15 +52,11 @@ body {
 <div class="swiper-container">
 
   <div class="swiper-wrapper">
+    {% for id in ids %}
     <div class="swiper-slide">
       <img width="100%" src="/static/img/aaa.jpg">
     </div>
-    <div class="swiper-slide">
-      <img width="100%" src="/static/img/aaa.jpg">
-    </div>
-    <div class="swiper-slide">
-      <img width="100%" src="/static/img/aaa.jpg">
-    </div>
+    {% endfor %}
   </div>
   <!-- Add Pagination -->
 
