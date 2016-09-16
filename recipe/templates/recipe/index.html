@@ -20,7 +20,7 @@
     <div style="text-align:center;margin-top:32px;color:#636566;">作りたい料理を選ぶ</div>
     <hr width="40px" style="margin-top:5px;color:color:#636566;height:5px;">
 
-    <div class="row">
+    <div class="row" style="margin-top:-10px;">
       {% for category in category_list %}
       <div class="col-xs-3">
         <div class="radio">
@@ -28,7 +28,7 @@
           <label for="c_{{ category.id }}">
             <img width="55px" src="/static/img/{{ category.name }}.png" class="radioGroup1" style="margin-left:-15px" />
           </label>
-          <br><br><div style="font-size:11px;text-align:center">{{ category.name }}</div>
+          <div style="font-size:11px;text-align:center;margin-top:10px;">{{ category.name }}</div>
         </div>
         {% if category.name == '野菜炒め' %}
         <br>
@@ -37,12 +37,12 @@
       {% endfor %}
     </div>
 
-    <br><br>
+    <br>
 
     <div style="text-align:center;color:#636566;">食べたい味を選ぶ</div>
     <hr width="40px" style="margin-top:5px;color:color:#636566;height:5px;">
 
-    <div class="row">
+    <div class="row" style="margin-top:-10px;">
       {% for taste in taste_list %}
       <div class="col-xs-3">
         <div class="radio">
@@ -50,7 +50,7 @@
           <label for="t_{{ taste.id }}">
             <img width="55px" src="/static/img/{{ taste.name }}.png" class="radioGroup2" style="margin-left:-15px" />
           </label>
-          <br><br><div style="font-size:11px;text-align:center">{{ taste.name }}</div>
+          <div style="font-size:11px;text-align:center;margin-top:10px;">{{ taste.name }}</div>
         </div>
       </div>
       {% endfor %}
