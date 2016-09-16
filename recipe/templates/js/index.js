@@ -20,7 +20,7 @@ var ARRANGE = ARRANGE || {};
   $('#index').on('click', 'input[name=category]', function(e) {
     var taste_id = $('input[name=taste]:checked').val();
     if(!taste_id) {
-      return false;
+      return ;
     }
     $('#cook_button').css('background-color', '#FF9933');
     $('#cook_button').css('color', 'White');
@@ -31,7 +31,7 @@ var ARRANGE = ARRANGE || {};
   $('#index').on('click', 'input[name=taste]', function(e) {
     var taste_id = $('input[name=category]:checked').val();
     if(!taste_id) {
-      return false;
+      return ;
     }
     $('#cook_button').css('background-color', '#FF9933');
     $('#cook_button').css('color', 'White');
