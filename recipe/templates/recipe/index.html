@@ -47,7 +47,9 @@
       <div class="col-xs-3">
         <div class="radio">
           <input type="radio" name="taste" id="t_{{ taste.id }}" value="{{ taste.id }}" style="display:none">
-          <label for="t_{{ taste.id }}"><img src="/static/img/{{ taste.name }}.png" class="radioGroup2" style="display: block;margin-left: auto;margin-right: auto;" /></label>
+          <label for="t_{{ taste.id }}">
+            <img width="55px" src="/static/img/{{ taste.name }}.png" class="radioGroup2" style="margin-left:-15px" />
+          </label>
           <br><br><div style="font-size:11px;text-align:center">{{ taste.name }}</div>
         </div>
       </div>
