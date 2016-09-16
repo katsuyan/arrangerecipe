@@ -29,7 +29,7 @@ var ARRANGE = ARRANGE || {};
 
 
   $('#index').on('click', 'input[name=taste]', function(e) {
-    var taste_id = $('input[name=taste]:checked').val();
+    var taste_id = $('input[name=category]:checked').val();
     if(!taste_id) {
       return false;
     }
